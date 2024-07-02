@@ -1,12 +1,13 @@
 import { lazy } from 'react'
-import {Route, Navigate, Routes, useLocation} from 'react-router-dom'
-import { CheckPathMatch, paths } from './helpers'
+import { useAppDispatch } from 'store'
+import { Route, Navigate, Routes, useLocation} from 'react-router-dom'
+import { checkPathMatch, paths } from './helpers'
 import path from 'path'
 const HomePage = lazy (() => import('pages/HomePage'))
 const PublicRoutes: React.FC = () => {
   const location = useLocation()
-
-  const isMatch = checkPathMatch(location.pathname, paths)
+  const dispatch = useAppDispatch()
+  const isMatch = checkPathMatch(location.pathname, paths)s
 
   return (
     <Routes>

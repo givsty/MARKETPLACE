@@ -1,7 +1,7 @@
 import React from 'react'
 const HomePage: React.FC = () => {
   return (
-    <TestDiv />
+    <h1>Главная страница</h1>
   )
 }
 
